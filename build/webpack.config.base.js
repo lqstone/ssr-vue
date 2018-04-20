@@ -4,6 +4,7 @@ const createVueLoaderOptions = require('./vue-loader.config.js')
 const isDev = process.env.NODE_ENV === 'development' // 判断是不是开发环境
 
 const config = {
+    mode: process.env.NODE_ENV || 'production', // 只接受两个值， development || production
     target: 'web',
     entry: path.resolve(__dirname, '../client/index.js'), // 入口
     output: {
